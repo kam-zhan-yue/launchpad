@@ -1,0 +1,14 @@
+services:
+  backend:
+    build: .
+    container_name: backend
+    volumes:
+      - ./backend:/app
+      - /app/target
+    ports:
+      - "8000:8000"
+    develop:
+      watch:
+        - action: sync
+          path: ./backend
+          target: /app

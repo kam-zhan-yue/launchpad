@@ -1,0 +1,9 @@
+[tools]
+"cargo:bacon" = "3.22.0"
+rust = "1.91.1"
+
+[tasks.start]
+run = "bacon -j webserver"
+
+[tasks.docker]
+run = "docker compose up"
