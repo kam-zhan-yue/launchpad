@@ -1,12 +1,5 @@
-use crate::apps::{
-    game,
-    users
-};
-use axum::{
-    Router,
-    http::Method,
-    routing::get,
-};
+use crate::apps::{game, users};
+use axum::{Router, http::Method, routing::get};
 use tower::ServiceBuilder;
 use tower_http::cors::CorsLayer;
 

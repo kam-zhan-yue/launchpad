@@ -10,6 +10,7 @@ A basic template to jumpstart an axum webserver with as little dependencies as p
 ```bash
 mise trust
 mise install
+mise format # for formatting
 mise start # for local instance
 mise docker # for docker instance
 ```
@@ -20,4 +21,3 @@ mise docker # for docker instance
 - [ ] Add Dockerfile
 - [ ] Add websockets / QUIC implementation
 - [ ] Add database implementation
-- [ ] Add a linter

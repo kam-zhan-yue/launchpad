@@ -7,3 +7,6 @@ run = "bacon -j webserver"
 
 [tasks.docker]
 run = "docker compose up"
+
+[tasks.format]
+run = "cargo fmt"
