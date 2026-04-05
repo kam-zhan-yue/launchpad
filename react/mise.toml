@@ -1,0 +1,11 @@
+[tools]
+bun = "latest"
+
+[tasks.start]
+run = "bun run dev"
+
+[tasks.format]
+run = "bun biome format"
+
+[tasks.lint]
+run = "bun biome lint"
