@@ -5,7 +5,7 @@ bun = "latest"
 run = "bun run dev"
 
 [tasks.format]
-run = "bun biome format"
+run = "bun biome check --write"
 
 [tasks.lint]
 run = "bun biome lint"
