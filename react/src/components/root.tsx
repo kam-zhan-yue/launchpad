@@ -1,7 +1,13 @@
-import { Main } from "#/phaser/main"
+import { Main } from "#/phaser/components/main"
+import { Outlet } from "@tanstack/react-router"
 
 const Root = () => {
-	return <Main />
+	return (
+    <>
+      <Main />
+      <Outlet />
+    </>
+  )
 }
 
 export { Root }

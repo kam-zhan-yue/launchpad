@@ -3,7 +3,7 @@ import { Boot } from "../scenes/boot"
 import { Game } from "../scenes/game"
 import Phaser from "phaser"
 import { useGameStore } from "../store"
-import "./styles.css"
+import "../styles.css"
 import { constants } from "../constants"
 
 const Main = () => {
@@ -39,7 +39,11 @@ const Main = () => {
     }
   }, [store.setGame])
 
-  return <div id="game-container" />
+  return (
+    <>
+      <div id="game-container" />
+    </>
+  )
 }
 
 export { Main }

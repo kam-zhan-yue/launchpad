@@ -6,7 +6,9 @@ class Boot extends Scene {
   }
 
   preload() {
-    this.load.image("island", "images/island.png")
+    this.load.image("level", "src/phaser/assets/level.png")
+    this.load.audio("menu", "src/phaser/assets/bgm-menu.ogg", { loop: true })
+    this.load.audio("main", "src/phaser/assets/bgm-main.ogg")
   }
 
   create() {

@@ -4,9 +4,5 @@ import { Root } from "#/components/root"
 import "../styles.css"
 
 export const Route = createRootRoute({
-	component: RootComponent,
+	component: Root,
 })
-
-function RootComponent() {
-	return <Root />
-}
