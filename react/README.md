@@ -21,5 +21,6 @@ mise start
 - [x] Setup Tanstack Router
 - [X] Setup Tanstack Query
 - [X] Setup Shadcn and Taliwind
-- [ ] Setup Phaser
-- [ ] Setup Three.js
+- [X] Setup Phaser
+- [X] Setup Three.js
+- [ ] Pretty Everything Up

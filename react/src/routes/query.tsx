@@ -1,9 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
+import { Main as Query } from '@/query/main'
 
 export const Route = createFileRoute('/query')({
-  component: RouteComponent,
+  component: Query,
 })
-
-function RouteComponent() {
-  return <div>Hello "/query"!</div>
-}
