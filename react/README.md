@@ -4,9 +4,11 @@ An opinionated React framework. Feel free to add and remove packages depending o
 
 | Packages | Usage |
 | - | - |
+| Shadcn & Tailwind | UI and Animation |
 | Tanstack Router | Routing and rendering purposes |
 | Tanstack Query | Querying state management and caching data |
 | Three JS | 3D animation and rendering |
+| Phaser | 2D animation and rendering |
 
 ```shell
 mise trust
@@ -16,7 +18,8 @@ mise start
 
 ## TODO
 - [X] Init project
-- [ ] Setup Tanstack Router
-- [ ] Setup Tanstack Query
+- [x] Setup Tanstack Router
+- [X] Setup Tanstack Query
+- [X] Setup Shadcn and Taliwind
+- [ ] Setup Phaser
 - [ ] Setup Three.js
-- [ ] Add Dockerfile
