@@ -9,8 +9,26 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ThreeJsRouteImport } from './routes/three-js'
+import { Route as QueryRouteImport } from './routes/query'
+import { Route as PhaserRouteImport } from './routes/phaser'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ThreeJsRoute = ThreeJsRouteImport.update({
+  id: '/three-js',
+  path: '/three-js',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QueryRoute = QueryRouteImport.update({
+  id: '/query',
+  path: '/query',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PhaserRoute = PhaserRouteImport.update({
+  id: '/phaser',
+  path: '/phaser',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +37,61 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/phaser': typeof PhaserRoute
+  '/query': typeof QueryRoute
+  '/three-js': typeof ThreeJsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/phaser': typeof PhaserRoute
+  '/query': typeof QueryRoute
+  '/three-js': typeof ThreeJsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/phaser': typeof PhaserRoute
+  '/query': typeof QueryRoute
+  '/three-js': typeof ThreeJsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/phaser' | '/query' | '/three-js'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/phaser' | '/query' | '/three-js'
+  id: '__root__' | '/' | '/phaser' | '/query' | '/three-js'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PhaserRoute: typeof PhaserRoute
+  QueryRoute: typeof QueryRoute
+  ThreeJsRoute: typeof ThreeJsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/three-js': {
+      id: '/three-js'
+      path: '/three-js'
+      fullPath: '/three-js'
+      preLoaderRoute: typeof ThreeJsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/query': {
+      id: '/query'
+      path: '/query'
+      fullPath: '/query'
+      preLoaderRoute: typeof QueryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/phaser': {
+      id: '/phaser'
+      path: '/phaser'
+      fullPath: '/phaser'
+      preLoaderRoute: typeof PhaserRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +104,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PhaserRoute: PhaserRoute,
+  QueryRoute: QueryRoute,
+  ThreeJsRoute: ThreeJsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

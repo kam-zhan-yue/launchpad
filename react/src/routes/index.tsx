@@ -1,6 +1,6 @@
-import { UI } from '#/phaser/components/ui'
 import { createFileRoute } from '@tanstack/react-router'
+import { Selection } from '#/components/selection'
 
 export const Route = createFileRoute('/')({
-  component: UI,
+  component: Selection,
 })

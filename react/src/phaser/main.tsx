@@ -1,10 +1,10 @@
 import { useEffect } from "react"
-import { Boot } from "../scenes/boot"
-import { Game } from "../scenes/game"
+import { Boot } from "./scenes/boot"
+import { Game } from "./scenes/game"
 import Phaser from "phaser"
-import { useGameStore } from "../store"
+import { useGameStore } from "./store"
 import "./styles.css"
-import { constants } from "../constants"
+import { constants } from "./constants"
 
 const Main = () => {
   const store = useGameStore()
