@@ -1,0 +1,8 @@
+[tasks.start]
+run = "uv manage.py runserver"
+
+[tasks.migrate]
+run = "uv manage.py migrate"
+
+[tasks.format]
+run = "uv run ruff format"
