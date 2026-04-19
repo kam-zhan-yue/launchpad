@@ -1,4 +1,4 @@
-package main
+package wiki
 
 import (
 	"os"
@@ -14,7 +14,10 @@ type Page struct {
 	Body []byte
 }
 
-var templates = template.Must(template.ParseFiles("edit.html", "view.html"))
+const TEMPLATES = "templates/"
+const DATA = "data/"
+
+var templates = template.Must(template.ParseFiles(TEMPLATES+"edit.html", TEMPLATES+"view.html"))
 var validPath = regexp.MustCompile("^/(edit|save|view)/([a-zA-Z0-9]+)$")
 
 func main() {
@@ -25,12 +28,12 @@ func main() {
 }
 
 func (p *Page) save() error {
-	filename := p.Title + ".txt"
+	filename := DATA + p.Title + ".txt"
 	return os.WriteFile(filename,p.Body, 0600)
 }
 
 func loadPage(title string) (*Page, error) {
-	filename := title + ".txt"
+	filename := DATA + title + ".txt"
 	body, err := os.ReadFile(filename)
 	if err != nil {
 		return nil, err
