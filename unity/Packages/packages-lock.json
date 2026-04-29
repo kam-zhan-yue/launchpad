@@ -14,6 +14,13 @@
       "dependencies": {},
       "hash": "f1f95d363131eb3eb740b621ce469782100f37ac"
     },
+    "com.github-glitchenzo.nugetforunity": {
+      "version": "https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "acc1c7bc9ea34c33b830e40316fca52553878d29"
+    },
     "com.kamzhanyue.audio-delivery": {
       "version": "https://github.com/kam-zhan-yue/audio-delivery.git",
       "depth": 0,
